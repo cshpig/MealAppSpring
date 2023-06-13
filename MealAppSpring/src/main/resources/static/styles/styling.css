@@ -1,0 +1,139 @@
+/* @charset "ISO-8859-1"; */
+@charset "UTF-8";
+
+h1 {
+	color: black;
+	text-align: center;
+}
+
+h2 {
+	font-family: palatino;
+	font-size: 1.5em;
+	text-transform: uppercase;
+}
+
+h3 {
+	font-family: palatino;
+	font-size: 1.5em;
+	color: black;
+	padding: 25px;
+	background-color: #f7d4a6;
+	
+}
+
+
+p {
+	font-family: palatino;
+	font-size: 20px;
+}
+
+/* body { */
+/*   background-color: lightblue; */
+/* } */
+
+strong {
+	font-weight: 700;
+	background-color: yellow;
+}
+
+/* p { */
+/*     font-family: sans-serif; */
+/* } */
+
+/* links */
+a:link, a:visited {
+	background-color: white;
+	color: #f27a7d;
+	padding: 5px 25px;
+	text-align: center;
+	text-decoration: none;
+}
+
+/* a:hover, a:active { */
+/* 	background-color: red; */
+/* } */
+
+a.create {
+	background-color: #c5f9d7;
+	color: black;
+	text-align: left;
+	text-decoration: none;
+}
+
+/* forms */
+textarea {
+	width: 100%;
+	height: 150px;
+	padding: 12px 20px;
+	box-sizing: border-box;
+	border: 2px solid #ccc;
+	border-radius: 4px;
+	background-color: #f8f8f8;
+	resize: none;
+}
+
+input[type=text], input[type=password] {
+	/*   width: 20%; */
+	padding: 10px 20px;
+	margin: 8px 0;
+	box-sizing: border-box;
+}
+
+input[type=button], input[type=submit] {
+	background-color: #c5f9d7;
+	border: none;
+	color: black;
+	padding: 12px 32px;
+	text-decoration: none;
+	margin: 4px 2px;
+	cursor: pointer;
+	/*   width: 100% */
+}
+
+/* table */
+
+th {
+	font-family: palatino;
+	font-size: 1.5em;
+	padding: 5px; 
+	text-align: left;
+/* 	background-color: #f27a7d; */
+/* 	color: white; */
+	border-bottom: 1px solid #ddd;
+}
+
+td {
+	padding: 5px;
+	text-align: left;
+	border-bottom: 1px solid #ddd;
+}
+
+
+
+
+
+ul.navigation {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li.navigation {
+  float: left;
+}
+
+li.navigation a {
+  display: block;
+  color: white;
+  background-color: #333;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li.navigation a:hover {
+  background-color: #111;
+}

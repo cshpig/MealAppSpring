@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Feed</title>
+<link th:href="@{/styles/styling.css}" rel="stylesheet" />
+</head>
+<body>
+	
+	<div class="navigation">
+		<ul class="navigation">
+		  <li class="navigation"><a href="feed">Home</a></li>
+		  <li class="navigation"><a href="my_recipes">My Recipes</a></li>
+		  <li class="navigation"><a href="my_collections">My Collections</a></li>
+		  <li class="navigation"><a href="saved_collections">Saved Collections</a></li>
+		  <li class="navigation"><a href="following">Following</a></li>
+		  <li class="navigation"><a href="logout">Logout</a></li>
+		</ul>
+	</div>
+
+	<h3>Hello, <span th:text="${username}"></span></h3>
+	
+	<hr>
+	
+	
+	<!--feed-->
+	<h3>Explore other recipes here!</h3>
+	<a href="recipes">All Recipes</a><br>
+	
+	
+
+</body>
+</html>

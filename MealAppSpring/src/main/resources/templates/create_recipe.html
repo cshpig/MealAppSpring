@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>New Recipe Page</title>
+<link th:href="@{/styles/styling.css}" rel="stylesheet" />
+
+</head>
+<body>
+	<div class="navigation">
+		<ul class="navigation">
+		  <li class="navigation"><a href="/feed">Home</a></li>
+		  <li class="navigation"><a href="/my_recipes">My Recipes</a></li>
+		  <li class="navigation"><a href="/my_collections">My Collections</a></li>
+		  <li class="navigation"><a href="/saved_collections">Saved Collections</a></li>
+		  <li class="navigation"><a href="/following">Following</a></li>
+		  <li class="navigation"><a href="/logout">Logout</a></li>
+		</ul>
+	</div>
+	
+	<h3>Create your recipe here!</h3>
+
+	<hr>
+
+	<form method="post" th:action="@{/recipes/create}" th:object="${recipe}">
+
+		<div>
+			<label>Recipe Name:</label> 
+			<input type="text" th:field="*{recipeName}"	placeholder="Name of Recipe" required>
+		</div>
+
+		<div>
+			<label>Recipe Content:</label> 
+			<input type="text" th:field="*{recipeContent}" placeholder="Enter instructions here" required>
+		</div>
+		
+		<div>
+			<label>Cuisine Type:</label> 
+			<input type="text" th:field="*{cuisineType}" placeholder="Cuisine Type" required> 
+		</div>
+		
+		<div>
+			<label>Meal Type:</label> 
+			<input type="text" th:field="*{mealType}" placeholder="Meal Type" required>
+		</div>
+		
+		<div>
+			<label>Preparation Time (Min):</label> 
+			<input type="number" th:field="*{prepTimeInMin}" placeholder="Preperation Time" required>
+		</div>
+
+		<div>
+			<label>Cook Time (Min):</label> 
+			<input type="number" th:field="*{cookTimeInMin}" placeholder="Cooking Time" required>
+		</div>
+		
+		<div>
+			<label>Clean Up Time (Min):</label> 
+			<input type="number" th:field="*{cleanUpTimeInMin}" placeholder="Clean Up Time" required>
+		</div>
+		
+		
+		<div>
+			<label>Ingredients:</label> 
+<!-- 			<input type="submit" value="Add Ingredient" formaction="/recipes/create/add_ingredient"> -->
+			<button type="submit" formaction="/recipes/create/add_ingredient">Add ingredient</button>
+		</div>
+		<div th:if="*{ingredients}">	
+			<table>
+				<tbody>
+				<tr th:each="ingredient:*{ingredients}">
+					<td> <input type="text" th:field="${ingredient.ingredientName}" placeholder="Enter ingredient name here"></td>
+					<td> <input type="submit" value="Remove" th:formaction="@{/recipes/create/remove_ingredient}"></td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+
+		
+		
+		<input type="submit" value="Create Recipe">
+	</form>
+
+	<!-- 	<form method="post" action="/recipe/create"> -->
+	<!-- 		<input type="text" name="recipeName" placeholder="Name of Recipe" required> -->
+	<!-- 		<input type="text" name="recipeContent" placeholder="Enter instructions here" required>  -->
+	<!-- 		<input type="submit" value="Create Recipe"> -->
+	<!-- 	</form> -->
+
+</body>
+</html>
